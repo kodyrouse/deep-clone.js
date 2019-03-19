@@ -1,2 +1,2 @@
 # deep-clone.js
-Simple object deep clone while keeping functionality vs losing functionality via converting to a string then back to an object
+Short and simple object deep clone while keeping functionality (vs losing functionality via converting to a string then back to an object). Passing in an object returns a new object with copied values. 
