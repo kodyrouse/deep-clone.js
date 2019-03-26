@@ -2,7 +2,7 @@
 Short and simple object / array deep clone while keeping functionality (compared to losing functionality with ```JSON.parse(JSON.stringify(testObject))```
 
 # Use
-This method uses [ES6 Syntax][http://es6-features.org/#Constants]. Please ensure you are using [Babel.io][https://babeljs.io] to have full support in all browsers!
+This method uses [ES6 Syntax](http://es6-features.org/#Constants). Please ensure you are using [Babel.io](https://babeljs.io) to have full support in all browsers!
 
 Pass in an object or array to ```DeepClone.clone(object)``` like so:
 
