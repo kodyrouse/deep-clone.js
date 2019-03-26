@@ -15,7 +15,7 @@ var testObject = {
  },
  favoritePeople: [
   {
-	 name: "Billy Maddison",
+	 name: "Billy Madison",
 	 favoriteFoods: ["Pasta", "Cookies"],
 	 accessoryColors: {
 	  shoes: "white",
