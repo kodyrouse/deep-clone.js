@@ -4,7 +4,7 @@ Short and simple object / array deep clone while keeping functionality (compared
 # Use
 This method uses [ES6 Syntax](http://es6-features.org/#Constants). Please ensure you are using [Babel.io](https://babeljs.io) to have full support in all browsers!
 
-Pass in an object or array to ```DeepClone.clone(object)``` like so:
+To deep clone an object or an array, pass it into to ```DeepClone.clone(object)``` like so:
 
 ```
 var testObject = {
@@ -27,5 +27,3 @@ var testObject = {
 const newObject = DeepClone.clone(object);
 
 ```
-
-
