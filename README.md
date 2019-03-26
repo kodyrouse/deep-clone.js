@@ -15,7 +15,7 @@ var testObject = {
  },
  favoritePeople: [
   {
-	 name: "Mom",
+	 name: "Billy Maddison",
 	 favoriteFoods: ["Pasta", "Cookies"],
 	 accessoryColors: {
 	  shoes: "white",
@@ -24,6 +24,7 @@ var testObject = {
  ]
 }
 
-const newObject = DeepClone.clone(object);
+// Returns a new object clone
+const newObject = DeepClone.clone(testObject);
 
 ```
