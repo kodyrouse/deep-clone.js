@@ -1,6 +1,6 @@
 class DeepClone {
 
-	static clone(input) {
+	clone = (input) => {
 
 		// Prevents invalid input
 		if (!this._validateInputForDeepClone(input)) {
@@ -13,7 +13,7 @@ class DeepClone {
 		return (this._validateArray(input)) ? this._deepCloneArray(input) : this._deepCloneObject(input);
 	}
 
-	static _deepCloneObject(object) {
+	_deepCloneObject = (object) => {
 
 		const newObject = {};
 		const objectKeys = Object.keys(object);
@@ -30,7 +30,7 @@ class DeepClone {
 		return newObject;
 	}
 
-	static _deepCloneArray(array) {
+	_deepCloneArray = (array) => {
 
 		const newArray = [];
 
@@ -42,7 +42,7 @@ class DeepClone {
 		return newArray;
 	}
 
-	static _copyValue(priorVal) {
+	_copyValue = (priorVal) => {
 
 		// I use _validateArray first because typeof "object" passes true for an array
 		return (this._validateArray(priorVal)) ? this._deepCloneArray(priorVal)
@@ -50,15 +50,18 @@ class DeepClone {
 			: priorVal;
 	}
 
-	static _validateInputForDeepClone(input) {
+	_validateInputForDeepClone = (input) => {
 		return this._validateObject(input) || this._validateArray(input);
 	}
 
-	static _validateObject(input) {
+	_validateObject = (input) => {
 		return typeof input === "object";
 	}
 
-	static _validateArray(input) {
+	_validateArray = (input) => {
 		return Array.isArray(input);
 	}
 }
+
+// Exports instance of DeepClone to reduce memory footprint
+export default new DeepClone();
