@@ -1,4 +1,4 @@
-class DeepClone {
+class _DeepClone {
 
 	clone = (input) => {
 
@@ -63,5 +63,5 @@ class DeepClone {
 	}
 }
 
-// Exports instance of DeepClone to reduce memory footprint
-export default new DeepClone();
+// Creates an instance of deep clone to reduce memory footprint
+export default new _DeepClone();
