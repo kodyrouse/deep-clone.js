@@ -35,7 +35,7 @@ class _DeepClone {
 		const newArray = [];
 
 		array.forEach(value => {
-			const newValue = this._copyValue(value, true);
+			const newValue = this._copyValue(value);
 			newArray.push(newValue);
 		});
 
