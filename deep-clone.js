@@ -1,6 +1,6 @@
 /**
 * deep-clone.js
-*	I currently store it in a constant as an object vs a js class -->
+* I currently store it in a constant as an object vs a js class -->
 * because a user should NOT instantiate a new object at each use as -->
 * it would increase memory footprint and is unnecessary
 **/
