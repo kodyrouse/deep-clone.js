@@ -1,6 +1,13 @@
-class _DeepClone {
+/**
+* deep-clone.js
+*	I currently store it in a constant as an object vs a js class -->
+* because a user should NOT instantiate a new object at each use as -->
+* it would increase memory footprint and is unnecessary
+**/
 
-	clone = input => {
+const DeepClone = {
+
+	clone: input => {
 
 		// Prevents invalid input
 		if (this._validateNull(input) || !this._validateInputForDeepClone(input)) {
@@ -11,9 +18,9 @@ class _DeepClone {
 		// Starts deep clone of array || object depending on input
 		// I use _validateArray first because typeof "object" passes true for an array
 		return (this._validateArray(input)) ? this._deepCloneArray(input) : this._deepCloneObject(input);
-	}
+	},
 
-	_deepCloneObject = object => {
+	_deepCloneObject: object => {
 
 		const newObject = {};
 		const objectKeys = Object.keys(object);
@@ -28,9 +35,9 @@ class _DeepClone {
 		});
 
 		return newObject;
-	}
+	},
 
-	_deepCloneArray = array => {
+	_deepCloneArray: array => {
 
 		const newArray = [];
 
@@ -40,27 +47,24 @@ class _DeepClone {
 		});
 
 		return newArray;
-	}
+	},
 
-	_copyValue = priorVal => {
+	_copyValue: priorVal => {
 
 		// I use _validateNull && _validateArray first because typeof "object" passes true for an array
 		return (this._validateNull(priorVal)) ? priorVal
 			:	(this._validateArray(priorVal)) ? this._deepCloneArray(priorVal)
 			: (this._validateObject(priorVal)) ? this._deepCloneObject(priorVal)
 			: priorVal;
-	}
+	},
 
-	_validateNull = input => input === null;
+	_validateNull: input => input === null,
 
-	_validateObject = input => typeof input === "object";
+	_validateObject: input => typeof input === "object",
 
-	_validateArray = input => Array.isArray(input);
+	_validateArray: input => Array.isArray(input),
 
-	_validateInputForDeepClone = (input) => {
+	_validateInputForDeepClone: input => {
 		return this._validateObject(input) || this._validateArray(input);
 	}
 }
-
-// Creates an instance of deep clone to reduce memory footprint
-export default new _DeepClone();
