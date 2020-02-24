@@ -5,10 +5,10 @@ Fast and simple object/array deep clone while keeping functionality (compared to
 - ~4.5X faster compared to ```JSON.parse(JSON.stringify(testObject))``` (Chrome)
 
 # Side Note
-deep-clone.js relies on ES6 syntax. Please ensure you are using either [Webpack](https://webpack.js.org) or [Babel.io](https://babeljs.io) to have full support in all browser versions!
+deep-clone.js relies on ES6 syntax. Please ensure you are using [Babel.io](https://babeljs.io) to have full browser support!
 
 # Use
-To deep clone an object or an array, pass it into to ```DeepClone.clone(object)``` like so:
+To deep clone an object or an array, pass it into to ```deepClone(object)``` like so:
 
 ```
 var testObject = {
@@ -29,6 +29,6 @@ var testObject = {
 }
 
 // Returns a new object clone
-const newObject = DeepClone.clone(testObject);
+const newObject = deepClone(testObject);
 
 ```
